@@ -2,26 +2,26 @@
 {
     public class Triangulo
         {
-            public decimal primeiroLado;
-            public decimal segundoLado;
-            public decimal terceiroLado;
+            public decimal LadoX;
+            public decimal LadoY;
+            public decimal LadoZ;
 
             public void ParametrosTriangulo()
             {
-                if (primeiroLado + segundoLado < terceiroLado ||
-                    segundoLado + terceiroLado < primeiroLado ||
-                    terceiroLado + primeiroLado < segundoLado)
+                if (LadoX + LadoY < LadoZ ||
+                    LadoY + LadoZ < LadoX ||
+                    LadoZ + LadoX < LadoY)
                     Console.WriteLine("Triangulo invalido, a soma de dois lados não pode ser menor que um numero ");
 
-                else if (primeiroLado == segundoLado &&
-                    segundoLado == terceiroLado &&
-                    terceiroLado == primeiroLado)
+                else if (LadoX == LadoY &&
+                    LadoY == LadoZ &&
+                    LadoZ == LadoX)
                     Console.WriteLine("Seu triangulo é equilatero");
 
-                else if (primeiroLado == segundoLado && segundoLado != terceiroLado ||
-                    segundoLado == terceiroLado && terceiroLado != primeiroLado ||
-                    terceiroLado == primeiroLado && primeiroLado != terceiroLado ||
-                    primeiroLado == terceiroLado && terceiroLado != segundoLado)
+                else if (LadoX == LadoY && LadoY != LadoZ ||
+                    LadoY == LadoZ && LadoZ != LadoX ||
+                    LadoZ == LadoX && LadoX != LadoZ ||
+                    LadoX == LadoZ && LadoZ != LadoY)
                     Console.WriteLine("Seu triangulo é isóceles");
 
                 else Console.WriteLine("Seu triangulo é escaleno");
